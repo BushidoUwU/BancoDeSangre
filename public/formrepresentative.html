@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/formrepresentative.css">
+    <title>FORMULARIO REPRESENTANTE HOSPITAL</title>
+</head>
+<body>
+    <section class="form-donation">
+        <form action="/validarcontacto" method="post">
+            <h4>Formulario de solicitud</h4>
+            <h3>Datos de la persona de contacto</h3>
+            <input class="controls" type="text" name="documenttype" id="Tydo" list="documentTypes" placeholder="Tipo de documento">
+            <datalist id="documentTypes">
+                <option value="1">Cédula de ciudadanía</option>
+                <option value="2">Cédula de extranjería</option>
+                <option value="3">Pasaporte</option>
+            </datalist>
+            <script>
+                document.getElementById("Tydo").addEventListener("input", function() {
+                    var inputValue = this.value;
+                    var validValues = ["1", "2", "3"];
+                    if (!validValues.includes(inputValue)){
+                        alert("Por favor, selecciona un tipo de documento válido.");
+                        this.value = ""; // Limpia el campo si el valor no es válido
+                    }
+                });
+            </script>
+            <input class="controls" type="text" name="documentnumber" id="dn" placeholder="Numero de documento">
+            <input class="controls" type="text" name="firstlastname" id="fln" placeholder="Primer apellido">
+            <input class="controls" type="text" name="firstname" id="fn" placeholder="Primer nombre">
+            <input class="controls" type="text" name="secondlastname" id="sln" placeholder="Segundo apellido">
+            <input class="controls" type="text" name="secondname" id="sn" placeholder="Segundo nombre">
+            <input class="controls" type="text" name="cellphone" id="cp" placeholder="Celular">
+            <input class="controls" type="text" name="mailc" id="m" placeholder="Correo">
+            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+            <input class="botons" type="submit" value="Subir datos">
+            <a href="formhospital.html" class="btn">Siguiente</a>
+        </form>
+        <script>
+            document.querySelector(".botons").addEventListener("click", function() {
+                alert("Datos subidos correctamente");
+            });
+        </script>
+    </section>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/formrequest.css">
+    <title>FORMULARIO SOLICITUD</title>
+</head>
+<body>
+    <section class="form-donation">
+        <form action="/validarsolicitud" method="post">
+            <h4>Formulario de solicitud</h4>
+            <h3>Datos de la solicitud</h3>
+            <input class="controls" type="date" name="today" id="myDate">
+                <script>
+                  const currentDate = new Date();
+                  const formattedDate = currentDate.toISOString().split("T")[0]; // Formato YYYY-MM-DD
+                  document.getElementById("myDate").value = formattedDate;
+                  document.getElementById("myDate").readOnly = true;
+                </script> 
+                <input class="controls" type="text" name="number_bags" id="fln" placeholder="Numero de bolsas">              
+            <input class="controls" type="text" name="bloodtype" id="bt" list="bloodTypes" placeholder="Tipo de sangre requerida">
+                <datalist id="bloodTypes">
+                    <option value="1">A+</option>
+                    <option value="2">A-</option>
+                    <option value="3">B+</option>
+                    <option value="4">B-</option>
+                    <option value="5">AB+</option>
+                    <option value="6">AB-</option>
+                    <option value="7">O+</option>
+                    <option value="8">O-</option>
+                </datalist>
+            <script>
+                document.getElementById("bt").addEventListener("input", function() {
+                    var inputValue = this.value;
+                    var validValues = ["1", "2", "3", "4", "5", "6", "7", "8"];
+                    if (!validValues.includes(inputValue)) {
+                        alert("Por favor, selecciona un tipo de sangre válido.");
+                        this.value = ""; // Limpia el campo si el valor no es válido
+                    }
+                });
+            </script>
+            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+            <input class="botons" type="submit" value="Solicitar">
+        </form>
+        <script>
+            document.querySelector(".botons").addEventListener("click", function() {
+                alert("Datos subidos correctamente");
+            });
+        </script>
+    </section>
+</body>
+</html>

@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("img/Fondo.jpg");
+}
+
+.form-donation{
+    width: 500px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.form-donation h4{
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-donation h3{
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.controls{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #de0a0d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+.form-donation p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-donation a{
+    color: white;
+    text-decoration: none;
+}
+
+.form-donation a:hover{
+    color: #de0a0d;
+    text-decoration: underline;
+}
+
+.form-donation .botons{
+    width: 100%;
+    background: #de0a0d;
+    border: 2px solid #de0a0d;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+.form-donation .btn {
+    width: 100%;
+    background: #de0a0d;
+    border: 2px solid #de0a0d;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+.form-donation .botons:hover{
+    background: none;
+}

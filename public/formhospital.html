@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/formhospital.css">
+    <title>FORMULARIO HOSPITAL</title>
+</head>
+<body>
+    <section class="form-donation">
+        <form action="/validarhospital" method="post">
+            <h4>Formulario de solicitud</h4>
+            <h3>Datos del hospital</h3>
+            <input class="controls" type="text" name="nit" id="nit" placeholder="NIT del hospital o centro de salud">
+            <input class="controls" type="text" name="hospital_name" id="hn" placeholder="Nombre del hospital o centro de salud">
+            <input class="controls" type="text" name="mailh" id="ml" placeholder="Correo del hospital o centro de salud">
+            <input class="controls" type="text" name="phone" id="pho" placeholder="Telefono del hospital o centro de salud">
+            <input class="controls" type="text" name="adress" id="adr" placeholder="Direccion del hospital o centro de salud">
+            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+            <input class="botons" type="submit" value="Subir datos">
+            <a href="formrequest.html" class="btn">Siguiente</a>
+        </form>
+        <script>
+            document.querySelector(".botons").addEventListener("click", function() {
+                alert("Datos subidos correctamente");
+            });
+        </script>
+    </section>
+</body>
+</html>

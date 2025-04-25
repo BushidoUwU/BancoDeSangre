@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/formdonor.css">
+    <title>FORMULARIO DONANTE</title>
+</head>
+<body>
+    <section class="form-donation">
+        <form action="/validardonador" method="post">
+            <h4>Formulario de donante</h4>
+            <input class="controls" type="text" name="documenttype" id="Tydo" list="documentTypes" placeholder="Selecciona un tipo de documento">
+            <datalist id="documentTypes">
+                <option value="1">Cédula de ciudadanía</option>
+                <option value="2">Cédula de extranjería</option>
+                <option value="3">Pasaporte</option>
+            </datalist>
+            <script>
+                document.getElementById("Tydo").addEventListener("input", function() {
+                    var inputValue = this.value;
+                    var validValues = ["1", "2", "3"];
+                    if (!validValues.includes(inputValue)){
+                        alert("Por favor, selecciona un tipo de documento válido.");
+                        this.value = ""; // Limpia el campo si el valor no es válido
+                    }
+                });
+            </script>
+            <input class="controls" type="text" name="documentnumber" id="dn" placeholder="Numero de documento">
+            <input class="controls" type="text" name="firstlastname" id="fln" placeholder="Primer apellido">
+            <input class="controls" type="text" name="firstname" id="fn" placeholder="Primer nombre">
+            <input class="controls" type="text" name="secondlastname" id="sln" placeholder="Segundo apellido">
+            <input class="controls" type="text" name="secondname" id="sn" placeholder="Segundo nombre">
+            <input class="controls" type="text" name="bloodtype" id="bt" list="bloodTypes" placeholder="Selecciona un tipo de sangre">
+                <datalist id="bloodTypes">
+                    <option value="1">A+</option>
+                    <option value="2">A-</option>
+                    <option value="3">B+</option>
+                    <option value="4">B-</option>
+                    <option value="5">AB+</option>
+                    <option value="6">AB-</option>
+                    <option value="7">O+</option>
+                    <option value="8">O-</option>
+                </datalist>
+            <script>
+                document.getElementById("bt").addEventListener("input", function() {
+                    var inputValue = this.value;
+                    var validValues = ["1", "2", "3", "4", "5", "6", "7", "8"];
+                    if (!validValues.includes(inputValue)) {
+                        alert("Por favor, selecciona un tipo de sangre válido.");
+                        this.value = ""; // Limpia el campo si el valor no es válido
+                    }
+                });
+            </script>
+            <h2>Fecha de nacimiento:</h2>
+            <input class="controls" type="date" name="birthdate" id="bd" placeholder="">
+            <h2>Fecha de ultima donacion: (Si ha donado antes)</h2>
+            <input class="controls" type="date" name="lastdatedonation" id="ldd" placeholder="">
+            <input class="controls" type="text" name="address" id="a" placeholder="Direccion">
+            <input class="controls" type="text" name="phone" id="p" placeholder="Telefono">
+            <input class="controls" type="text" name="cellphone" id="cp" placeholder="Celular">
+            <input class="controls" type="text" name="mail" id="m" placeholder="Correo">
+            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+            <input class="botons" type="submit" value="Donar">
+        </form>       
+        <script>
+            document.querySelector(".botons").addEventListener("click", function() {
+                alert("Datos subidos correctamente");
+            });
+        </script>
+    </section>
+</body>
+</html>
