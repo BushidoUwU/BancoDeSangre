@@ -1,11 +1,26 @@
-node app.js
+# Bienvenido a este proyecto
 
-instalar node.js
+Este es un proyecto personal de mi universidad. Soy Andrés Rozo, el autor de esta página. Este fue un proyecto de 2023 que quiero retomar para perfeccionarlo lo más posible.
 
-Abrir PowerShell como administrador y poner:
+## Instrucciones de uso:
 
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+1. Ejecutar la aplicación:
+   ```bash
+   node app.js
+   ```
 
-Get-ExecutionPolicy
+2. Instalar dependencias:
+   ```bash
+   instalar node.js
+   ```
 
-npm install mysql express ejs
+3. Abrir PowerShell como administrador y ejecutar:
+   ```bash
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+   Get-ExecutionPolicy
+   ```
+
+4. Instalar paquetes necesarios:
+   ```bash
+   npm install mysql express ejs
+   ```
